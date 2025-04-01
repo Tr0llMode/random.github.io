@@ -1,0 +1,353 @@
+.html {
+box-sizing: border-box;
+height: 100%;
+}
+ , *::before, *::after {  /* Эта конструкция указывается всегда, необходима для того чтобы элементы выстраивались правильным образом и паддинги и границы не влияли на размеры элемента. https://www.youtube.com/watch?v=9prTwMLJQC8  */
+box-sizing: inherit;
+}
+h1, h2, h3, h4, h5, h6 {
+    padding: 0; /** Сброс автоматических отступов заголовков чтобы в будущем не было проблем */
+    margin: 0; /** Сброс автоматических отступов заголовков чтобы в будущем не было проблем */
+}
+
+.roboto-Roboto {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+}
+
+.inter-Inter {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+:root {
+    --background: rgb(237, 230, 221);   
+    --header__text: rgb(30, 25, 40);
+    --how: rgb(255, 211, 148);;
+}
+/* ! 727 между empathy и меню */
+
+body {
+    margin: 0;
+    max-width: 100vw; /* Исправлено */
+    background-color: var(--background);
+    height: 100%;
+}
+
+.container {
+    width: 1920px; /* Было min-width, теперь max-width */
+    margin: 0 auto; /* Центрируем */
+    padding: 0 120px;
+}
+
+.header {
+    min-height: 112px;
+    display: flex;
+    width: 100%; /* Чтобы не сжимался */
+}
+
+.header__title {
+    display: flex;
+    justify-content: space-between; /* Теперь элементы раздвигаются */
+    align-items: center; /* Выровняем элементы */
+}
+
+.header__menu {
+    display: flex;
+    flex-wrap: wrap /*! перенос элемента на новую строку при нехватке места, адаптация */
+}
+.header__menu:hover{
+
+}
+
+.header__menu__item {
+    padding: 48px 40px 44px 40px; /* Уменьшены отступы */
+    color: rgb(30, 25, 40);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    
+}
+a.header__menu__item:hover {
+    background: rgb(202, 166, 114);
+    color: #000;
+    padding-bottom: 30px;
+}
+
+.header__menu__item:first-child {
+    padding: 48px 40px 44px 28px;
+}
+
+h1 {
+    color: rgb(30, 25, 40);
+    font-family: 'Roboto';
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 58px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin: 0 0 24px 0;
+    width: 407px;
+}
+
+.section__container {
+    padding: 80px 120px;
+
+    max-height: 548px;
+    max-width: 1920px;
+}
+
+main {
+}
+.container__p {
+    color: rgba(30, 25, 40, 0.8);
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.25px;
+    text-align: left;
+    padding: 0 0 4px 0;
+}
+
+.container__small__p {
+    color: rgba(30, 25, 40, 0.8);
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.25px;
+    text-align: left;
+    margin: 0;
+    width: 549px;
+    margin: 0 0 28px 0;
+}
+
+.container__try {
+    color: rgb(30, 25, 40);
+    font-family: 'Inter';
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.25px;
+    text-align: left;
+    margin: 0 0 24px 0;
+    }
+
+form {
+    display: flex;
+}
+
+input {
+    background-color: white;
+    border-radius: 30px;
+    height: 56px;
+    width: 448px;
+    padding: 0 0 0 31px;
+        color: rgba(30, 25, 40, 0.23);
+        font-family: 'Inter';
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0%;
+        border: none;
+}
+
+.try__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    right: 200px;
+    margin: 8px 0;
+    padding: 10px 32px;
+    height: 40px;
+    border: none;
+    background: rgb(30, 25, 40);
+    color: rgb(244, 239, 233);
+    border-radius: 30px;
+}
+
+input[type="text"] {
+    color: rgb(0, 0, 0);             /* * ИЗМЕНЕНИЕ ЦВЕТА ТЕКСТА НАПИСАННОГО ЧЕЛОВЕКОМ В ЭЛЕМЕНТЕ FORM */
+}
+
+a {
+    text-decoration: none;  
+}
+
+.ppl {
+    position: relative;
+    left: 1080px;
+    bottom: 298px;
+    margin: 0;
+}
+
+.ppl__2 {
+    position: relative;
+    bottom: 250px;
+    left: 1060px;
+}
+
+
+.relief__container {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+        justify-content: center;
+        align-items: center;
+    flex-direction: column;
+    margin: 0px auto;  
+    width: 1680px;
+    height: 380px;
+    position: relative;
+    bottom: 300px;
+}
+
+.h2 {
+    color: rgb(30, 25, 40);
+    font-family: 'Roboto';
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 42px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+.p {
+    width: 653px;
+    color: rgba(30, 25, 40, 0.8);
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.25px;
+    text-align: center;
+}
+.learn__more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 0;
+    padding: 10px 32px;
+    height: 40px;
+    border: none;
+    background: rgb(30, 25, 40);
+    color: rgb(244, 239, 233);
+    border-radius: 30px;
+    transition: transform 3s, ease-out color 300ms;
+}
+
+.learn__more:hover{
+    background: rgb(202, 166, 114);
+    color: #000;
+    
+}
+
+.faq__container {
+    display: flex;
+    background-color: var(--how);
+    width: 1680px;
+    justify-content: space-between;
+}
+h3 {
+    color: rgb(30, 25, 40);
+    font-family: Roboto;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin: 80px 40px;
+    width: 300px;
+}
+.list__container {
+    margin: 80px 120px 0 0
+}
+.list {
+    display: flex;
+    width: 600px;
+    height: 90px
+}
+
+.num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    background: rgb(30, 25, 40);
+    border-radius: 50%;
+    margin: 0 24px 0 0;
+
+}
+
+.list__number {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.25px;
+    margin-right: 24px;
+    color: white;
+    
+}
+
+h4 {
+    color: rgb(30, 25, 40);
+    font-family: Inter;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0.25px;
+    text-align: left;
+}
+.list__text {
+    color: rgba(30, 25, 40, 0.8);
+font-family: Inter;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0.18px;
+text-align: left;
+}
+
+.text__container{
+    margin: 30px;
+}
+
+@media (max-width: 600px) {
+    .relief__container {
+        width: 700px;
+        height: 250px;
+        right: 85px;
+        margin-top: 50px;
+        
+    }
+    .try__button {
+        right: 170px;
+    }
+    .header__menu{
+        flex-wrap: nowrap;
+        align-items: center;
+        margin-left: 50px;
+    }
+    .header__menu__item {
+        white-space: nowrap;
+    }
+    .ppl {
+        position: relative;
+        left: 230px;
+        bottom: 0px;
+        margin: 0;
+    }
+    .ppl__2 {
+        position: relative;
+        bottom: 200px;
+        left: 50px;
+    }
+}
